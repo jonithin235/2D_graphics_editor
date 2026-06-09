@@ -49,6 +49,6 @@ int main()
 {
     clearCanvas();
     displayCanvas();
-
+    drawRectangle(5, 10, 5, 15);
     return 0;
 }
