@@ -34,6 +34,8 @@ void displayCanvas()
 }
 void drawRectangle(int row, int col, int height, int width)
 {
+    printf("Rectangle function called!\n");
+
     int i, j;
 
     for(i = row; i < row + height; i++)
@@ -49,6 +51,6 @@ int main()
 {
     clearCanvas();
     displayCanvas();
-    drawRectangle(5, 10, 5, 15);
+    drawRectangle(0, 0, 3, 5);
     return 0;
 }
