@@ -19,15 +19,33 @@ void clearCanvas()
 
 void displayCanvas()
 {
-    int i, j;
-    for(i = 0; i < ROWS; i++)
+    int i,j;
+
+    printf("\n+");
+
+    for(i=0;i<COLS;i++)
+        printf("-");
+
+    printf("+\n");
+
+    for(i=0;i<ROWS;i++)
     {
-        for(j = 0; j < COLS; j++)
+        printf("|");
+
+        for(j=0;j<COLS;j++)
         {
-            printf("%c", canvas[i][j]);
+            printf("%c",canvas[i][j]);
         }
-        printf("\n");
+
+        printf("|\n");
     }
+
+    printf("+");
+
+    for(i=0;i<COLS;i++)
+        printf("-");
+
+    printf("+\n");
 }
 
 void drawRectangle(int row, int col, int height, int width)

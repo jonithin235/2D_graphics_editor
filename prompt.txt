@@ -1,0 +1,337 @@
+2D GRAPHICS EDITOR MINI PROJECT
+
+PROMPT 1:
+
+I have a mini project in C. The problem statement says to create a 2D graphics editor using * and _. I don't really understand what I am supposed to make. Explain the project in simple words.
+
+RESPONSE:
+
+Explained that the project is like a simple version of MS Paint running in the terminal. Suggested using a 2D character array as a canvas and using * characters to represent drawn shapes while _ characters represent empty space.
+
+==================================================================
+
+PROMPT 2:
+
+What should be the first step? I am completely confused and don't know where to start.
+
+RESPONSE:
+
+Suggested creating a 2D array called canvas and writing functions to initialize it and display it.
+
+Example:
+
+#define ROWS 20
+#define COLS 40
+
+char canvas[ROWS][COLS];
+
+Functions suggested:
+
+clearCanvas()
+displayCanvas()
+
+==================================================================
+
+PROMPT 3:
+
+Write the code for creating and displaying the canvas.
+
+RESPONSE:
+
+Generated code for:
+
+void clearCanvas()
+{
+...
+}
+
+void displayCanvas()
+{
+...
+}
+
+and explained nested loops for filling and printing the array.
+
+==================================================================
+
+PROMPT 4:
+
+The assignment requires drawing shapes. How do I draw a rectangle?
+
+RESPONSE:
+
+Suggested creating a drawRectangle() function using nested loops and replacing underscore characters with *.
+
+Example:
+
+void drawRectangle(int row, int col, int height, int width)
+
+==================================================================
+
+PROMPT 5:
+
+I added drawRectangle() but nothing is appearing. The output stays the same.
+
+RESPONSE:
+
+Suggested checking:
+
+1. Whether the function is being called.
+2. Whether the source file was saved.
+3. Whether the program was recompiled.
+4. Whether displayCanvas() is called after drawing.
+
+==================================================================
+
+PROMPT 6:
+
+I think I found the problem. I was running the old executable file.
+
+RESPONSE:
+
+Explained that every code change requires recompiling:
+
+gcc graphics_editor.c -o graphics_editor
+
+Then:
+
+.\graphics_editor.exe
+
+==================================================================
+
+PROMPT 7:
+
+How do I take rectangle coordinates from the user instead of hardcoding them?
+
+RESPONSE:
+
+Suggested using scanf() for:
+
+row
+column
+height
+width
+
+and passing those values to drawRectangle().
+
+==================================================================
+
+PROMPT 8:
+
+How can I make the program menu driven?
+
+RESPONSE:
+
+Suggested a switch-case menu structure.
+
+Example:
+
+1. Draw Rectangle
+2. Display Canvas
+3. Exit
+
+==================================================================
+
+PROMPT 9:
+
+How do I draw a horizontal line and a vertical line on a character canvas?
+
+RESPONSE:
+
+Generated drawLine() function and explained checking:
+
+if(row1 == row2)
+
+for horizontal lines.
+
+if(col1 == col2)
+
+for vertical lines.
+
+==================================================================
+
+PROMPT 10:
+
+Can you write a simple triangle drawing function?
+
+RESPONSE:
+
+Suggested nested loops where the number of stars increases in each row.
+
+Example output:
+
+*
+
+**
+
+---
+
+---
+
+---
+
+==================================================================
+
+PROMPT 11:
+
+How do I draw a circle using characters?
+
+RESPONSE:
+
+Explained using the distance formula.
+
+Suggested:
+
+dx * dx + dy * dy <= radius * radius
+
+to determine whether a point belongs inside the circle.
+
+==================================================================
+
+PROMPT 12:
+
+The circle draws but I don't see anything.
+
+RESPONSE:
+
+Explained that drawing only updates the array and that displayCanvas() must be selected from the menu to actually print the result.
+
+==================================================================
+
+PROMPT 13:
+
+What features are required according to the assignment?
+
+RESPONSE:
+
+Listed:
+
+1. Add objects
+2. Delete objects
+3. Modify objects
+4. Display picture
+5. Use a 2D character array
+
+==================================================================
+
+PROMPT 14:
+
+My code can add shapes but not delete or modify them. What is the easiest way to implement these features?
+
+RESPONSE:
+
+Suggested:
+
+Delete:
+Call clearCanvas() and remove shapes.
+
+Modify:
+Clear the canvas and redraw using new dimensions.
+
+==================================================================
+
+PROMPT 15:
+
+How can I make the display look more like a canvas?
+
+RESPONSE:
+
+Suggested adding a border around the drawing area.
+
+Example:
+
++--------------------------------------+
+|                                      |
+|      ******                          |
+|      ******                          |
+|                                      |
++--------------------------------------+
+
+==================================================================
+
+PROMPT 16:
+
+How do I initialize a Git repository for the project?
+
+RESPONSE:
+
+Provided commands:
+
+git init
+git add .
+git commit -m "Initial commit"
+
+==================================================================
+
+PROMPT 17:
+
+How do I connect the project to GitHub?
+
+RESPONSE:
+
+Provided commands:
+
+git remote add origin <repository-url>
+git branch -M main
+git push -u origin main
+
+==================================================================
+
+PROMPT 18:
+
+What should I put in README.md?
+
+RESPONSE:
+
+Suggested including:
+
+Project title
+Project description
+Features
+Programming language used
+Instructions to compile and run
+
+==================================================================
+
+PROMPT 19:
+
+The assignment says I need a prompt.txt file. What should I include?
+
+RESPONSE:
+
+Suggested documenting the prompts used during project development and the corresponding responses from the AI assistant.
+
+==================================================================
+
+PROMPT 20:
+
+How do I compile and run the final project?
+
+RESPONSE:
+
+Provided commands:
+
+gcc graphics_editor.c -o graphics_editor
+
+.\graphics_editor.exe
+
+==================================================================
+
+PROMPT 21:
+
+Can I improve the project further?
+
+RESPONSE:
+
+Suggested future improvements:
+
+1. Store multiple shapes using structures.
+2. Implement true object deletion.
+3. Implement true object modification.
+4. Add colors using ncurses.
+5. Create a mouse-driven interface.
+6. Add save/load functionality.
+
+==================================================================
+
+END OF PROMPT HISTORY
